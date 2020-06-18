@@ -1,0 +1,285 @@
+
+
+header,
+.mainVisual,
+main,
+footer {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+nav,
+h1,
+dt,
+dd {
+    color: 	#75859F;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 34px;
+    letter-spacing: 2.5px;
+    padding-top: 100px;
+    position: relative  ;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+h1::before {
+    content: '';
+    display: block;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 20px;
+    text-align: center;
+    font-size: 16px;
+}
+h1::after {
+    content: '';
+    width: 25px;
+    display: block;
+    border-bottom: 3px solid silver;
+    position: relative;
+    text-align: center;
+    left: calc((100% - 25px)/2);
+    top: 14px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+nav> ul  {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+}
+
+nav li a{
+    text-decoration: none;
+    color: #75859F;
+    position: relative;
+    display: inline-block;
+}
+
+nav li a::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 3px;
+    left: 0;
+    transform: scale(0,1);
+    transform-origin: left;
+    transition: transform .3s;
+    background: silver;
+}
+
+a:hover::after {
+    transform: scale(1,1);
+    transform-origin: left;
+}
+
+
+.mainVisual img{
+    width: 100%;
+}
+
+main >p {
+    text-align: center;
+}
+
+main >h1::before {
+    content: 'ABOUT';
+}
+
+
+#intro {
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+#intro h2 {
+    font-weight: bold;
+    font-size: 18px;
+    color:gray;
+    margin: 20px 0;
+}
+
+#intro section {    
+    width: 30%;
+    color: gray;   
+    font-size: 13px; 
+    height: 300px;
+    border-bottom: 1px solid silver;
+}
+
+#intro section img {
+    width: 100%;
+}
+
+#menuList {
+    height: 800px;
+    background-color: #E8EDF3;
+}
+
+#menuList >h1::before {
+    content: 'MENU';
+}
+
+#menuList .content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+#menuList .content > .menuContent {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#menuList .content section h2 {
+    display: block;
+    width: auto;    
+    background-color: #74859F;
+    color: #fff;
+    padding: 20px;
+}
+      
+#menuList .menuContent >section {
+    width: 45%;
+}
+#menuList .menuContent div {
+    width: 45%;
+}
+/* #menuList .content div section {
+    height: 45%;
+} */
+
+#menuList .content dl {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #74859F;
+}
+
+#menuList section dl:last-child {
+    border-bottom: none;
+}
+#access {
+    padding-bottom: 80px;
+
+}
+#access > div{
+    display: flex;
+}
+#access h1 {
+    padding-top: 50px;
+    position: relative;
+}
+
+#access >h1::before {
+    content: 'ACCESS';
+}
+
+#access section {
+    width: 40%;
+    height: auto;
+    padding: 20px 50px;
+    font-size: 14px;
+    font-weight: bolder;
+    color:#6E6E6E;
+    line-height: 1.5em;
+    z-index: 1;
+}
+
+#access section p {
+    margin-top: 15px;
+}
+
+#access h2 {
+    font-size: 22px;
+    font-weight: bold;
+    color: #666666;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #74859F;
+}
+
+#access .companyInfo {
+    width: auto;
+    height: auto;
+    background-color: #DDDDDD
+    ;
+    padding: 10px;
+}
+#access .sns {
+    display: flex;
+    width: 75px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#access .sns li{
+    position: relative;
+}
+
+#access .sns img {
+    position: absolute;
+    left: 13px;
+    top: 17px;
+}
+
+#access .sns li::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #74859F;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+}
+
+footer {
+    height: 50px;
+    background-color: #74859F;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    line-height: 50px;
+    padding-left: 50px;
+    position: relative;
+}
+
+.toTop {
+    display: block;
+    position: absolute;
+    background-color: #BACAE1;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center; 
+    left: 50%;
+    bottom: 50%;
+    cursor: pointer;
+    scroll-behavior: smooth;
+}
+
+.toTop::after {
+    content: '^';
+    color: color;
+    font-size: 20px;
+    position: relative;
+    line-height: 60px;
+}
+

@@ -1,0 +1,251 @@
+body {
+    padding: 0;
+}
+
+#mainVisual {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; 
+    display: block;
+    background-size: cover;
+    background-image: url('../img/img01.jpg');
+}
+ 
+/* .mainVisual img {
+    width: 100%;
+    height: 100%;
+    vertical-align: bottom;
+}  */
+
+nav {
+    display: block;
+    width: 30%;
+    position: relative;
+}
+
+nav li {
+    position: relative;
+    padding: 10px;
+    text-align: center;
+    background-color: burlywood;
+    color: white;
+    z-index: 1;
+}
+
+nav li:after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transition: all .3s;
+    z-index: -1;
+}
+
+nav li:hover::after {
+    content: '';
+    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-content {
+    display: flex;
+}
+
+main {
+    display: block;
+    width: 70%;
+}
+.controlBar {
+    display: flex;
+    height: 60px;
+    width: 100%;
+    border-bottom: 1px solid silver;
+    background-color: white;
+    /* transform: translateY(-60px); */
+}
+
+.btns {
+    width: 100px;
+    height: auto;
+    display: flex;
+    margin:10px 40px;
+}
+
+.btn {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color .3s;
+}
+
+.btn:hover {
+    background-color: dimgray;
+}
+
+.btn::after {
+    content:'\f053';
+    font-family:'Font Awesome 5 Free';  
+    font-size: 20px;
+    font-weight: 900;
+    position: absolute;
+    top: 10px;
+    left: 10px;    
+}
+
+#btn-R:after {
+    content: '\f054';
+    left: 15px;
+}
+
+.pager {
+    margin: 25px 0px;
+    width: 140px;
+    display: flex;
+} 
+
+.pager .line {
+    width: 50px;
+    height: 10px;
+    border-top: 1px solid gray;
+    position: relative;
+    top: 5px;
+    margin: 0 5px;
+}
+
+.toDown {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: calc(100% - 570px);
+    /* background-color: aquamarine; */
+}
+
+.arrowDown {
+    display: block;
+    width: 16px;
+    height: 16px;
+    /* background-color: gray; */
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    transform: rotate(45deg);
+    position: relative;
+    cursor: pointer;
+}
+
+.arrowDown:hover {
+    top: -2px;
+}
+
+
+.arrowDown::after {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    
+}
+.arrowDown:hover::after {
+    transform: translate(2px,2px);
+}
+
+.sns {
+    width: 300px;
+    height: auto;
+    display: flex;
+    margin: 0px 20px;
+    align-items: center;
+}
+
+.sns ul {
+    display: flex;
+}
+.sns li {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    position: relative;
+    border: 1px solid gray;
+    z-index: 1;
+    overflow: hidden;
+    margin-left: 10px;
+}
+
+.sns li:hover {
+    border: none
+}
+
+.sns li::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    position: absolute;
+    background-color: burlywood;
+    top: 17px;
+    left: 17px;
+    z-index: -1;
+    opacity: 0;
+    transition: all .3s;
+}
+
+.sns li:hover::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    opacity: 1;
+    border-radius: 50%;
+}
+
+.sns li::after {
+    content:'\f16d';
+    font-family:'Font Awesome 5 Brands';  
+    position: absolute;
+    font-size: 15px;
+    left: 12px;
+    top: 12px;
+    color: gray;
+    cursor: pointer;
+}
+
+.sns li:hover::after {
+    color: white;
+}
+
+.sns .fb::after {   
+    content: '\f39e';
+}
+.sns .p::after {   
+    content: '\f231';
+}
+.sns .twitter::after {   
+    content: '\f099';
+}
+.sns .google::after {   
+    content: '\f0d5';
+}
+
+
+/* 
+.fab {
+    color: white;
+    position: absolute;
+} */

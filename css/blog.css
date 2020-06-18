@@ -1,0 +1,381 @@
+
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+body{
+  
+  padding: 0px;
+  margin: 0px;
+  
+}
+
+
+
+/*-------------------------------------------------------------------------------------------------
+				 reset
+--------------------------------------------------------------------------------------------------*/
+
+body{
+  
+}
+
+
+#container{
+  width: 950px;
+  height: auto;
+  margin: 0 auto;
+
+
+}
+
+
+
+header h1{
+  font-size: 36px;
+  display: inline-box;
+  font-weight: bold;
+  width: 130px;
+  height: 150px;
+  float: left;
+  padding-top: 40px; 
+  
+}
+
+header span{
+  font-size: 16px;
+  font-family: 'Yu Gothic';
+  font-weight: lighter;
+  
+}
+
+
+
+
+nav{
+  height: 150px;
+  width: 840px;
+  padding-top: 40px; 
+}
+
+
+/*
+nav ul{
+  display: block;
+  font-family: 'Yu Gothic';
+  line-height: 100px;
+  float: left;
+  
+}*/
+
+
+.menu {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-left: 23%;
+    font-family: 'Yu Gothic';
+    
+   
+}
+
+.menu a:hover{
+  text-decoration: none;
+  color: #CC9933;
+}
+
+
+nav li{
+  
+  float: left;
+  margin-left: 36px;
+  width: 100px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: black;
+  cursor: pointer;
+  
+}
+
+nav li:last-child{
+  background: none;
+}
+
+nav li:nth-of-type(3){
+  width: 150px;
+}
+
+nav li:first-child{
+  margin-left: 0;
+}
+
+
+nav a{
+    color: black;
+}
+
+.menu   li ul >li{
+
+  opacity: 0;
+  width: 150px;
+  height: auto;
+  line-height: 30px;
+  border: 2px solid #eee;
+  margin-left: 0;
+  background-color: white;
+
+  
+}
+
+.menu  li:hover li{
+  position: relative;
+  display: block;
+  opacity: 1;
+  transition-duration: 1.5s;
+
+}
+
+
+
+
+
+
+
+nav li input[type="text"]{
+ 
+  width: 160px;
+  background-image: url("http://images.clipartpanda.com/search-clipart-search-ideogram.png");
+  background-size: 25px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: 1px solid #eee;
+  
+  
+}
+
+nav li input[type="checkbox"]{
+
+}
+
+
+
+#top {
+  width: 1050px;
+  height: 600px;
+  display: flex;
+  flex-wrap: wrap;
+ 
+  
+}
+
+
+#top img{
+  width: 950px;
+  height: 500px;
+  flex:none;
+}
+
+
+
+#top p{
+  width: 950px;
+  font-size: 26px;
+  margin-top: 60px;
+  color: rgba(0,0,0,.5);
+}
+
+
+#article{
+  padding: 100px 0;
+}
+
+#article dl{
+  margin: 20px 0;
+  padding: 20px 0px;
+  width: 950px;
+  display: flex;
+  
+}
+
+
+#article dl span{
+  font-size: 22px;
+}
+
+#article dd{
+  margin-left: 130px;
+}
+
+
+#article #page{
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 120px;
+  
+}
+
+
+#article #page li{
+  display: inline-block;
+  border: 1px solid black;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+#article #page li:first-child{
+  background-color: #eee;
+}
+
+
+
+#introduce{
+  display: flex;
+  width: 950px;
+  height: auto;
+  border-top:3px solid #eee;
+  border-bottom:3px solid #eee;
+  justify-content: space-around;
+  font-family: 'Yu Gothic';
+  padding:70px 0;  
+}
+
+
+.introbox{
+  
+  width: 200px;
+  height: 250px;
+  font-family: 'Yu Gothic';
+
+
+
+  
+}
+
+.introbox h1{
+  font-size: 16px;
+  
+}
+
+.introbox span{
+  border-bottom: 1px solid #eee;
+  font-size:20px;
+  cursor:pointer;
+ 
+  
+}
+
+.introbox span:hover{
+  color:  #CC9933 ;
+}
+
+
+footer{
+  text-align: center;
+  color:gray;
+  font-size: 20px;
+  width: 950px;
+  height: 200px;
+  line-height: 200px;
+
+}
