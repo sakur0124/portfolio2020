@@ -37,17 +37,19 @@ header >.logo {
 header .searchBar {
     position: relative;
     width: 240px;
-    min-width: 200px;
+    height: 40px;
+    min-width: 200px;    
 }
 
  span {
     display: block;
-    position: relative;
+    position: absolute;
     width: 40px;
     min-width: 40px;
     height: 40px;
-    border-radius: 50%;
+    border-radius: 20px 0 0 20px;
     background-color: #F0F2F5;
+    /* background-color: pink; */
     top: 0;
     left: 10px;
     cursor: pointer;
@@ -61,35 +63,34 @@ header .searchBar span::after {
     top: 12px;
     left: 12px;
     z-index: 10;
+    /* display: none; */
+    transition: transform .3s;
 }
-
-/* header .searchBar::before{
-    content: '\f002';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    position: absolute;
-    top: 12px;
-    left: 16px;
-    z-index: 10;
-} */
 
 header .searchBar input {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 11;
-    display: none;
+    width: calc(100% - 40px);
+    border-radius: 0 20px 20px 0;
+    margin-left: 40px;
 }
 
 header .searchBar input::placeholder {
-    /* padding-left: 26px; */
     display: inline-block;
     height: 100%;
     width: 100%;
+}   
+
+.searchBar.toFocus span::after{
+    transform: translateX(-9px);
+    display: none;
 }
 
-header .searchBar input:focus::placeholder {
-    padding-left: 0;
+.searchBar.toFocus input{
+   border-radius: 20px;
+   width: 220px;
+   transform: translateX(-25px);
 }
 
 header input {
@@ -143,7 +144,6 @@ header .icon {
     background-color: #F0F2F5;
     z-index: -1;
     overflow: scroll;
-    /* padding-left: 13px; */
 }
 
 .menuStyle i {
@@ -215,13 +215,11 @@ header .icon {
     flex-wrap: nowrap;
     width: 100%;
     padding: 0 5px;
-    /* border: 1px solid red; */
 }
 
 .content .postUser {
     width: calc(100% - 28px - 10px);
     height: 28px;
-    /* border: 1px solid black; */
 }
 
 .content span {
