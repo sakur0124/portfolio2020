@@ -1,0 +1,380 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    border-radius: 20px;
+    background-color: #F0F2F5;
+    border: none;
+}
+
+input:focus {
+    outline: none;  
+}
+
+header {
+    position: fixed;
+    display: flex;
+    height: 60px;
+    width: 100%;
+    max-width: 1300px;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 1px 1px 5px #E2E4E7;
+}
+
+header >.logo {
+    display: block;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+header .searchBar {
+    position: relative;
+    width: 240px;
+    min-width: 200px;
+}
+
+ span {
+    display: block;
+    position: relative;
+    width: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #F0F2F5;
+    top: 0;
+    left: 10px;
+    cursor: pointer;
+}
+
+header .searchBar span::after {
+    content: '\f002';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 10;
+}
+
+/* header .searchBar::before{
+    content: '\f002';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    position: absolute;
+    top: 12px;
+    left: 16px;
+    z-index: 10;
+} */
+
+header .searchBar input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    display: none;
+}
+
+header .searchBar input::placeholder {
+    /* padding-left: 26px; */
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+}
+
+header .searchBar input:focus::placeholder {
+    padding-left: 0;
+}
+
+header input {
+    width: 240px;
+    height: 40px;
+    padding-left: 10px;
+    position: relative;
+}
+
+header nav {
+    display: flex; 
+    width: calc(100% - 280px*2);
+    min-width: 40%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+nav >div:hover {
+    background-color:#F2F2F2;    
+}
+
+header .icon {
+    width: 280px;
+    min-width: 280px;
+    height: 100%;
+}
+
+.userIcon{
+    display: block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 20px;
+}
+
+.userIcon img {
+    width: 100%;
+}
+
+.logo >img {
+    width: 100%;
+}
+
+.menuStyle {
+    position: fixed;
+    padding-top: 60px;
+    width: 280px;
+    height: 100%;
+    background-color: #F0F2F5;
+    z-index: -1;
+    overflow: scroll;
+    /* padding-left: 13px; */
+}
+
+.menuStyle i {
+    display: inline-block;
+    width: 90%;
+    height: 2px;
+    background-color: #CED0D4;
+    margin: 10px 13px 0;
+}
+
+.menuStyle li a {
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+    text-decoration: none;
+    line-height: 50px;
+    border-radius: 5px;
+    padding-left: 13px;
+}
+
+.menuStyle li a:hover {
+    background-color: #E4E6E9;  
+}
+
+.content {
+    display: block;
+    width: 710px;
+    height: 100vh;
+    background-color:#F0F2F5;
+    position: absolute;
+    top: 60px;
+    left: 280px;
+    z-index: -1;
+    padding-top: 50px;
+}
+
+.content .userIcon {
+    width: 35px;
+    height: 35px;
+}
+
+.content article {
+    display: block;
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 1px 5px #E2E4E7;
+    position: relative; 
+    margin-bottom: 20px;
+}
+
+.content #toPost {
+    height: 120px;
+}
+
+.content #toPost .comment {
+    bottom: -20%;
+}
+
+.content #toPost .event {
+    bottom: -30%;
+    border-bottom: none;
+}
+
+.content .postTitle {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 0 5px;
+    /* border: 1px solid red; */
+}
+
+.content .postUser {
+    width: calc(100% - 28px - 10px);
+    height: 28px;
+    /* border: 1px solid black; */
+}
+
+.content span {
+    background: white;
+}
+
+.content span:hover {
+    background-color: #F0F2F5;
+}
+
+.content .setting {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+}    
+
+.content .setting > i {
+    position: absolute;
+    top: 6px;
+    left: 6px;
+}
+
+.content .event {
+    margin: 0 auto;
+    width: 90%;
+    height: 40px;
+    border-top: 1px solid #CED0D4;
+    border-bottom:1px solid #CED0D4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5px;
+    position: relative;
+    bottom: -50%;
+}
+
+.content .event >button {
+    width: 50%;
+    height: 80%;
+    border: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.content .event >button:hover {
+    background-color:#F2F2F2;    
+}
+
+.content .comment {
+    display: flex;
+    width: 90%;
+    position: relative;
+    bottom: -55%;
+    margin: 0 auto;
+}
+
+.content .comment input {
+    width: calc(100% - 28px);
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+.content .comment input::placeholder {
+    color: #65676B;
+} 
+.content .comment input:focus::placeholder {
+    color: #A6A8AB;
+} 
+
+.comment >.userIcon {
+    margin: 0;
+}
+
+.rightMenu {
+    right: 0;
+}
+
+.rightMenu h1 {
+    color: #76777C;
+    font-weight: bold;
+    margin: 10px 0 10px 13px ;
+}
+
+.rightMenu ul:first-child li a {
+    height: 115px; 
+    display: flex;
+    align-items: center;
+}
+
+.rightMenu .cmImg {
+    width: 50%; 
+    height: 100px;
+    background-image: url("../img/about__cake.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;  
+}
+
+.rightMenu .cmImg.cm-2{
+    background-image: url("../img/about__coffee.jpg");
+    background-size: cover;
+}
+
+.rightMenu .cmContent {
+    width: 40%;
+    height: 100%;
+    padding: 10px;
+    line-height: 100px;
+}
+
+/*---------------------------
+    smart phone
+---------------------------*/
+
+@media screen and (min-width: 1000px) {
+ 
+    nav >div {
+        padding: 10px 50px;
+        border-radius: 10px;
+        cursor: pointer; 
+    }
+}
+
+@media screen and (max-width: 900px){
+    .leftMenu {
+        display: none;
+    }
+
+    .rightMenu {
+        width: 30%;
+    }
+    .icon {
+        display: none;
+    }
+
+    .content {
+        left: 0;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    body {
+        background-color:#F0F2F5;
+    }
+
+    .rightMenu {
+        display: none;
+    }
+
+    .content {
+        width: 100%;
+        background-color: transparent;
+    }
+}
