@@ -1,0 +1,139 @@
+
+body {
+    background: url("http://free-paper-texture.com/p/p0526/p0526_m.jpg");
+}
+
+.topImg {
+    background: url("https://www.pakutaso.com/shared/img/thumb/gori0I9A3053072102529_TP_V.jpg")no-repeat;
+    background-size: cover;
+    height: 300px;
+}
+
+h1 {
+    color: white;
+    font-size: 32px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.4); 
+    margin-left: 20px;  
+}
+
+.box {
+    position: relative;
+    width: 200px;
+    height:200px;
+    background-color:white;
+    margin-bottom: 20px;
+    border: 2px solid gray;
+}
+
+.box::before {
+    content: '2019.09';
+    font-size: 12px;
+    color: white;
+    line-height: 20px;
+    width: auto;
+    height: 20px;
+    padding: 0 5px;
+    background-color: #aacdbe;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px #184d47;
+}
+
+.box::after {
+    content: '';
+    font-size: 12px;
+    text-align: left;
+    white-space: pre;
+    position: absolute;
+    color: white;
+    width: 100%;
+    height: 100px;
+    background: rgba(0,0,0,.7);
+    bottom: -10px;
+    left: 0;
+    opacity: 0;
+    transition: all .4s;
+}
+
+.box:hover::after {
+    bottom: 0;
+    opacity: 1;
+}
+
+#theater.box::before {
+    content: '2019.08';
+}
+
+#coffeeShop.box::before {
+    content: '2020.05';
+}
+
+#jsCoding.box::before {
+    content: '2020.06';
+}
+
+#fbPractice.box::before {
+    content: '2020.06';
+}
+
+.box:hover {
+    border: 3px solid brown;    
+}
+
+.flex {
+    width: 850px;
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+#theater {
+    background: url("../img/theater.png") no-repeat center;
+    background-size: cover;
+    position: relative;
+}
+
+#theater::after {
+    content: '実際にある映画館のホームページで\A模写コーディングしました\A \A使用言語：HTML CSS jQuery\A プラグイン：bxSlider';
+}
+
+#isara {
+    background: url("../img/isara.png") no-repeat center;
+    background-size: cover;
+}
+
+#isara::after {
+    content: '実際にあるプログラミングスクール\Aで模写コーディングしました\A \A使用言語：HTML CSS';
+}
+
+#coffeeShop {
+    background: url("../img/coffeeShop.png") no-repeat center;
+    background-size: cover;
+}
+
+#coffeeShop::after {
+    content: 'サイトで無料配布のデザイン素材\Aでコーディングを練習しました\A \Aレスポンシブ対応\A使用言語：HTML CSS　jQuery';
+}
+
+#jsCoding {
+    background: url("../img/jsCoding.png") no-repeat center;
+    background-size: cover;
+}
+
+#jsCoding::after {
+    content: '実際にあるサイトの動き\Aをコーディングしてみました\A \A使用言語：HTML CSS　javaScript';
+}
+
+#fbPractice {
+    background: url("../img/fbPractice.png") no-repeat center;
+    background-size: cover;
+}
+
+#fbPractice::after {
+    content: 'Facebookのページを参考して、\Aコーディングの練習してみました\A \A使用言語：HTML CSS jQuery';
+}
