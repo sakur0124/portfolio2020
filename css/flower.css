@@ -1,0 +1,264 @@
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.mainVisual {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/mainVisual.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+nav {
+    width: 100%;
+    height: 60px;
+    background-color: #ea907a;
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .logo {
+    width: 70%;
+}
+
+nav .menuBar{
+    display: flex;
+    width: 30%;
+    /* background-color: seashell; */
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .menuBar li a {
+    display: inline-block;
+    color: white;
+    width: 60px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 2px;
+    transition: all .4s;
+}
+
+nav .menuBar li a:hover {
+    background-color: white;
+    color: #ea907a;
+}
+
+main .gallery {
+    width: 100%;
+    height: 80vh;
+    background: -webkit-linear-gradient(left top,#f1c5c5,#8bcdcd);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+main .gallery .photo {
+    width: 285px;
+    height: 285px;
+    border: 5px dotted white;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: transform .5s;
+    position: relative;
+}
+
+main .gallery .photo:hover {
+    transform: scale(1.1);
+}
+
+main .gallery .photo:hover p{
+    opacity: 1;
+}
+
+main .gallery .photo img {
+    width: 100%;
+    height: 100%;
+}
+
+
+main .gallery .photo p {
+    position: absolute;
+    color: white;
+    font-size: 30px;
+    z-index: 2;
+    left: 100px;
+    top: 40px;
+    opacity: 0;
+    transition: opacity .6s;
+    text-shadow: 1px 1px 1px gray;
+}
+.intro .lesson {
+    display: flex;
+    margin-bottom: 30px;   
+    justify-content: center;
+}
+
+.intro .lesson > img {
+    width: 40%;
+    height: auto;   
+}
+
+.intro .lesson:last-child {
+    flex-direction: row-reverse;
+}
+
+.intro .lesson .introContent {
+    width: 40%;
+    padding-top:100px;
+    text-align: center;
+}
+
+.intro .lesson .introContent h1 {
+    display: inline-block;
+    font-size: 26px;
+    font-weight: bold;
+    border-bottom: 3px solid tomato ;
+    margin-bottom: 40px;
+}
+
+.intro .lesson .introContent .toHide {
+    display: inline-block;
+    background-color: #8bcdcd;
+    padding: 10px 5px;
+    border-radius: 4px;
+    color: white;
+    margin: 20px 0;   
+    border: none;
+}
+
+
+.intro .hideContent {
+    opacity: 0;
+    /* height: 0; */
+    transition: all 3s;
+}
+
+.para {
+    height: 100vh;
+    background: url(../img/para.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+.paraContent {
+    width: 250px;
+    height: 250px;
+    background-color: pink;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    line-height: 250px;
+}
+
+.paraContent h1 {
+    display: block;
+    background-color: #ff9a76;
+    color: white;
+    border: 5px solid white;
+    font-size: 42px;
+    padding: 10px 15px;
+    letter-spacing: .3em;
+    text-align: center;
+    box-shadow: 1px 1px 3px gray;
+}
+
+.people {
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.people .peoplePicture {
+    width: 50%;
+    height: auto;
+    transform: translateX(-20%);
+    opacity: 0;
+    transition: all .5s;
+}
+
+.people .peoplePicture.toShow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.people .peoplePicture img{
+    width: 100%;
+    height: auto;   
+}
+
+.people .text {
+    width: 50%;
+    background-color: white;
+    line-height: 1.5;
+    text-align: center; 
+    padding-top: 100px;
+}
+
+.people .text p {
+    transform: translateX(20%);
+    opacity: 0;
+    transition: all .5s;
+    transition-duration: 3s;
+}
+
+.people .text p.toShow {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+footer {
+    display: flex;
+    height: 140px;
+    align-items: center;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(left top,#f1c5c5,#8bcdcd);
+    padding-right: 20px;
+}
+
+footer .sns {
+    display: flex;
+}
+footer .sns li{
+    margin-left: 20px;
+    transform: translateY(-200%);
+    opacity: 0;
+    transition: all .5s .3s;    
+}
+
+footer .sns li.toShow {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.opHours {
+    letter-spacing: .4em;
+    text-align: center;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all .5s .3s;   
+}
+
+.opHours.toShow {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.opHours h1 {
+    color: white;   
+    margin-bottom: 10px;
+    font-size: 26px;
+}

@@ -78,6 +78,10 @@ h1 {
     content: '2020.06';
 }
 
+#flower.box::before {
+    content: '2020.07';
+}
+
 .box:hover {
     border: 3px solid brown;    
 }
@@ -86,10 +90,15 @@ h1 {
     width: 850px;
     display: flex; 
     flex-wrap: wrap;
-    justify-content: space-between;
+    /* justify-content: space-between; */
+    justify-content: flex-start;
     text-align: center;
     margin: 0 auto;
     padding-top: 40px;
+}
+
+.flex a {
+    margin-right: 10px;
 }
 
 #theater {
@@ -136,4 +145,13 @@ h1 {
 
 #fbPractice::after {
     content: 'Facebookのページを参考して、\Aコーディングの練習してみました\A \A使用言語：HTML CSS jQuery';
+}
+
+#flower {
+    background: url("../img/flower.png") no-repeat center;
+    background-size: cover;
+}
+
+#flower::after {
+    content: '実際にあるサイトの動きを\Aコーディングしてみました\A \A使用言語：HTML CSS jQuery';
 }
