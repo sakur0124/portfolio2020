@@ -1,0 +1,50 @@
+.header {
+  background: gray;
+}
+
+.done {
+  text-decoration: line-through;
+  color: #ccc;
+}
+
+.cmd {
+  font-size: 12px;
+  cursor: pointer;
+  color: #08c;
+  margin-left: 5px;
+}
+
+.cmd > i {
+  margin-left: 5px;
+}
+
+h1 {
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding: 16px 10px;
+  background-color: #d8d3cd;
+}
+
+h1 > button {
+  float: right;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 1px 1px 3px gray;
+}
+
+h1 > :hover {
+  opacity: 0.7;
+}
+
+h1 > span {
+  color: #ccc;
+  font-size: 12px;
+  font-weight: normal;
+  margin: 5px;
+}
+
+form > input[type="submit"] {
+  margin-left: 5px;
+}
